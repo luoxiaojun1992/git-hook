@@ -16,6 +16,6 @@ if ($data) {
 	$refArr = explode('/', $ref);
 	$branch = $refArr[2];
 	if ($branch == PROD_BRANCH) {
-		system('./build.sh');
+		system('./build.sh > /dev/null 2>&1 &');
 	}
 }
