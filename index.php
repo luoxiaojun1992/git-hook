@@ -15,7 +15,12 @@ if ($data) {
 	$ref = $data['ref'];
 	$refArr = explode('/', $ref);
 	$branch = $refArr[2];
+	$project = $data['repository']['full_name'];
 	if ($branch == PROD_BRANCH) {
-		system('./build.sh > /dev/null 2>&1 &');
+		switch($project) {
+			case 'luoxiaojun1992/luoxj-blog':
+				system('./build.sh > /dev/null 2>&1 &');
+				break;
+		}
 	}
 }
