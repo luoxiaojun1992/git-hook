@@ -21,6 +21,9 @@ if ($data) {
 			case 'luoxiaojun1992/luoxj-blog':
 				system('./build.sh > /dev/null 2>&1 &');
 				break;
+			case 'luoxiaojun1992/luoxj-blog-backend':
+				system('./luoxj_blog_backend_build.sh > /dev/null 2>&1 &');
+				break;
 		}
 	}
 }
