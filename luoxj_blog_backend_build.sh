@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh root@114.55.142.227 -l root 'su - www && cd /home/www/api.fourleaver.com && git pull && ./lb migrate/up'
+ssh root@114.55.142.227 -l www 'cd /home/www/api.fourleaver.com && git pull && ./lb migrate/up'
 
 if [ $? -eq 0 ]; then
     echo 'Build succeed'
