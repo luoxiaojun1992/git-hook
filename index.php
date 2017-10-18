@@ -19,14 +19,18 @@ if ($data) {
 	if ($branch == PROD_BRANCH) {
 		switch($project) {
 			case 'luoxiaojun1992/luoxj-blog':
-				system('./build.sh > /dev/null 2>&1 &');
+				system('./deploy_scripts/build.sh > /dev/null 2>&1 &');
 				break;
 			case 'luoxiaojun1992/luoxj-blog-backend':
-				system('./luoxj_blog_backend_build.sh > /dev/null 2>&1 &');
+				system('./deploy_scripts/luoxj_blog_backend_build.sh > /dev/null 2>&1 &');
 				break;
 			case 'luoxiaojun1992/sf':
-				system('./sf_build.sh > /dev/null 2>&1 &');
+				system('./deploy_scripts/sf_build.sh > /dev/null 2>&1 &');
 				break;
+			case 'luoxiaojun1992/services':
+				system('./deploy_scripts/services_build.sh > /dev/null 2>&1 &');
+				break;
+
 		}
 	}
 }
