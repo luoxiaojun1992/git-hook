@@ -18,18 +18,23 @@ if ($data) {
 	$project = $data['repository']['full_name'];
 	if ($branch == PROD_BRANCH) {
 		switch($project) {
+			//博客
 			case 'luoxiaojun1992/luoxj-blog':
 				system('./deploy_scripts/build.sh > /dev/null 2>&1 &');
 				break;
+			//博客后台
 			case 'luoxiaojun1992/luoxj-blog-backend':
 				system('./deploy_scripts/luoxj_blog_backend_build.sh > /dev/null 2>&1 &');
 				break;
+			//服务框架
 			case 'luoxiaojun1992/sf':
 				system('./deploy_scripts/sf_build.sh > /dev/null 2>&1 &');
 				break;
+			//微服务
 			case 'luoxiaojun1992/services':
 				system('./deploy_scripts/services_build.sh > /dev/null 2>&1 &');
 				break;
+			//Git自动部署
 			case 'luoxiaojun1992/git-hook':
 				system('./deploy_scripts/git_hook_build.sh > /dev/null 2>&1 &');
 				break;
