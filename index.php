@@ -30,6 +30,10 @@ if ($data) {
 			case 'luoxiaojun1992/services':
 				system('./deploy_scripts/services_build.sh > /dev/null 2>&1 &');
 				break;
+			case 'luoxiaojun1992/git-hook':
+				system('./deploy_scripts/git_hook_build.sh > /dev/null 2>&1 &');
+				break;
+
 
 		}
 	}
