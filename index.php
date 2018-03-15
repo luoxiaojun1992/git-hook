@@ -1,8 +1,10 @@
 <?php
 
+$config = require_once __DIR__ . '/config.php';
+
 define('PROD_BRANCH', 'master');
 
-$secret = '3JsqJSHVTsx1uKqy';
+$secret = $config['secret'];
 
 $jsonData = file_get_contents('php://input');
 
@@ -38,8 +40,10 @@ if ($data) {
 			case 'luoxiaojun1992/git-hook':
 				system('./deploy_scripts/git_hook_build.sh > /dev/null 2>&1 &');
 				break;
-
-
+			//Block Chain
+            case 'luoxiaojun1992/block-chain':
+                system('./deploy_scripts/blockchain_build.sh > /dev/null 2>&1 &');
+                break;
 		}
 	}
 }
