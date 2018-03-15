@@ -41,7 +41,7 @@ if ($data) {
 				system('./deploy_scripts/git_hook_build.sh > /dev/null 2>&1 &');
 				break;
 			//Block Chain
-            case 'luoxiaojun1992/block-chain':
+            case 'luoxiaojun1992/blockchain':
                 system('./deploy_scripts/blockchain_build.sh > /dev/null 2>&1 &');
                 break;
 		}
